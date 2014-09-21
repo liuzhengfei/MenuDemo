@@ -9,5 +9,9 @@
     <string name="place_icon">景点</string>
     <string name="baike_icon">百科</string>
     <string name="more_icon">更多</string>
-
+    <string name="prev">上一步</string>
+    <string name="next">下一步</string>
+    
+    <color name="black">#000000</color>
+	<color name="white">#ffffff</color>
 </resources>
