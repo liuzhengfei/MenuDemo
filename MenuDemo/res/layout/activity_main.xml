@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@android:id/tabhost"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical">
+	    
+	    <!-- FrameLayout布局是最简单的布局方式，所有添加到这个布局中的视图都是以层叠的方式显示。第一个添加到布局中视图显示在最底层，最后一个被放在最顶层 -->
+	     <!-- 像素统一用dip，字体统一用sp -->
+	    <FrameLayout android:id="@android:id/tabcontent"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0.0dip"
+	        android:layout_weight="1.0"/>
+	    <!-- gone表示 隐藏 -->
+	    <TabWidget android:id="@android:id/tabs"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.0"
+	        android:visibility="gone"/>
+	    <!-- android:gravity用于设置View中内容相对于View组件的对齐方式，而android:layout_gravity用于设置View组件相对于Container的对齐方式 -->
+	    <!-- android:gravity　属性是对该view中内容的限定．比如一个button 上面的text. 你可以设置该text 相对于view的靠左，靠右等位置 -->
+	    <RadioGroup android:id="@+id/main_radio"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="bottom"
+	        android:background="@drawable/maintab_toolbar_bg"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal">
+	        <!-- tag和id的作用是一样的
+	        	使用View.findViewWithTag()或者View.getTag()这两个方法去调用对应的控件视图!
+				另外，findViewById（）方法在编译时会自动检测有无错误！而findViewWithTag（）方法不具备！ -->
+	        <RadioButton android:id="@+id/main_icon"
+	            style="@style/main_tab_bottom"
+	            android:layout_marginTop="2.0dip"
+	            android:drawableTop="@drawable/main_icon"
+	            android:tag="main_icon"
+	            android:text="@string/main_icon"/>
+	        
+	        <RadioButton android:id="@+id/search_icon"
+	            style="@style/main_tab_bottom"
+	            android:layout_marginTop="2.0dip"
+	            android:drawableTop="@drawable/search_icon"
+	            android:tag="search_icon"
+	            android:text="@string/search_icon"/>
+	        
+	        <RadioButton android:id="@+id/place_icon"
+	            style="@style/main_tab_bottom"
+	            android:layout_marginTop="2.0dip"
+	            android:drawableTop="@drawable/place_icon"
+	            android:tag="place_icon"
+	            android:text="@string/place_icon"/>
+	        
+	        <RadioButton android:id="@+id/baike_icon"
+	            style="@style/main_tab_bottom"
+	            android:layout_marginTop="2.0dip"
+	            android:drawableTop="@drawable/baike_icon"
+	            android:tag="baike_icon"
+	            android:text="@string/baike_icon"/>
+	        
+	        <RadioButton android:id="@+id/more_icon"
+	            style="@style/main_tab_bottom"
+	            android:layout_marginTop="2.0dip"
+	            android:drawableTop="@drawable/more_icon"
+	            android:tag="more_icon"
+	            android:text="@string/more_icon"/>
+	    </RadioGroup>
+	    
+	</LinearLayout>
+</TabHost>
